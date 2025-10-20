@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Zapatillas Urban", "price": 29990, "image": "https://via.placeholder.com/300x200?text=Zapatillas" },
+  { "id": 2, "name": "Polera Básica",    "price": 12990, "image": "https://via.placeholder.com/300x200?text=Polera" },
+  { "id": 3, "name": "Jeans Slim",       "price": 34990, "image": "https://via.placeholder.com/300x200?text=Jeans" }
+]
