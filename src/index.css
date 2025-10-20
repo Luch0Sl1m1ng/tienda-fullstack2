@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* === Colores de marca Trenes de Chile === */
+:root{
+  --brand-bg:#0B1E39;       /* azul oscuro corporativo */
+  --brand-accent:#FFD500;   /* amarillo EFE */
+}
+
+/* === Botón primario con colores personalizados === */
+.btn-primary {
+  background-color: var(--brand-bg);
+  border-color: var(--brand-bg);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+/* === Animación de zoom suave del hero === */
+.hero-zoom {
+  transform: scale(1.02);
+  animation: heroZoom 12s ease-in-out infinite alternate;
+}
+@keyframes heroZoom {
+  from { transform: scale(1.02); }
+  to { transform: scale(1.07); }
+}

@@ -10,20 +10,16 @@ export default function Header() {
     <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
-          Mi Tienda Online
+          <span style={{ color: "#FFD500" }}> Trenes de Chile</span>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-            <Nav.Link as={Link} to="/products">Productos</Nav.Link>
+            <Nav.Link as={Link} to="/products">Recorridos</Nav.Link>
             <Nav.Link as={Link} to="/checkout">
-              Carrito{" "}
-              {count > 0 && (
-                <Badge bg="light" text="dark" pill>
-                  {count} items
-                </Badge>
-              )}
+              Mis boletos{" "}
+              {count > 0 && <Badge bg="light" text="dark" pill>{count}</Badge>}
             </Nav.Link>
             <Nav.Link href="#registro">Registro</Nav.Link>
           </Nav>

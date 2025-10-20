@@ -1,8 +1,23 @@
 [
-  { "id": 1, "name": "Laptop Gaming", "desc": "Potente laptop para gaming con tarjeta gráfica dedicada", "price": 999.99, "image": "https://via.placeholder.com/600x400?text=Laptop+Gaming" },
-  { "id": 2, "name": "Mouse Inalambrico", "desc": "Mouse ergonómico sin cables con sensor óptico", "price": 29.99, "image": "https://via.placeholder.com/600x400?text=Mouse" },
-  { "id": 3, "name": "Teclado Mecanico", "desc": "Teclado RGB mecánico con switches azules", "price": 89.99, "image": "https://via.placeholder.com/600x400?text=Teclado" },
-  { "id": 4, "name": "Monitor 4K", "desc": "Monitor 27 pulgadas con resolución 4K UltraHD", "price": 459.99, "image": "https://via.placeholder.com/600x400?text=Monitor+4K" },
-  { "id": 5, "name": "Auriculares Gaming", "desc": "Auriculares con micrófono y sonido envolvente", "price": 79.99, "image": "https://via.placeholder.com/600x400?text=Auriculares" },
-  { "id": 6, "name": "Webcam HD", "desc": "Cámara web FullHD con enfoque automático", "price": 49.99, "image": "https://via.placeholder.com/600x400?text=Webcam" }
+  {
+    "id": 1,
+    "name": "Santiago • Chillán",
+    "desc": "Servicio TerraSur — Duración 5h 20min — 2 salidas diarias",
+    "price": 15990,
+    "image": "/images/imagen 1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Alameda • Rancagua",
+    "desc": "Rancagua Express — Duración 1h 10min — 5 salidas diarias",
+    "price": 4990,
+    "image": "/images/imagen 2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Concepción • Temuco",
+    "desc": "Servicio Nocturno — Duración 6h 15min — 1 salida diaria",
+    "price": 19990,
+    "image": "/images/imagen 7.jpg"
+  }
 ]

@@ -10,7 +10,7 @@ export default function ProductCard({ p, onAdd }) {
         <Card.Text className="text-muted">{p.desc}</Card.Text>
         <div className="fs-5 fw-semibold text-primary mb-2">{money(p.price)}</div>
         <Button className="w-100" onClick={() => onAdd(p)}>
-          Agregar al Carrito
+        Comprar boleto
         </Button>
       </Card.Body>
     </Card>

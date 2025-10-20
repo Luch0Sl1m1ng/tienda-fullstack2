@@ -7,10 +7,10 @@ export default function Cart() {
 
   return (
     <Card className="shadow-sm">
-      <Card.Header className="bg-primary text-white d-flex justify-content-between align-items-center">
-        <span>Carrito de Compras</span>
-        <Badge bg="light" text="dark">{items.reduce((a,b)=>a+b.qty,0)} items</Badge>
-      </Card.Header>
+    <Card.Header className="bg-primary text-white d-flex justify-content-between align-items-center">
+    <span>Boletos seleccionados</span>
+    <Badge bg="light" text="dark">{items.reduce((a,b)=>a+b.qty,0)} boletos</Badge>
+    </Card.Header>
       <ListGroup variant="flush">
         {items.length === 0 && (
           <ListGroup.Item className="text-muted">Carrito vacío</ListGroup.Item>
