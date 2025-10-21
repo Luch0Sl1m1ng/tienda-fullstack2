@@ -1,30 +1,32 @@
-import { Navbar, Container, Nav, Badge } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
-  const { items } = useCart();
-  const count = items.reduce((a, b) => a + b.qty, 0);
+  const isHome = useLocation().pathname === "/";
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
+    <Navbar expand="lg" className={isHome ? "navbar-overlay" : "navbar-solid"}>
       <Container>
         <Navbar.Brand as={Link} to="/" className="fw-bold">
-          <span style={{ color: "#FFD500" }}> Trenes de Chile</span>
+          Trenes de Chile
         </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
+        <Navbar.Toggle aria-controls="main-nav" />
+        <Navbar.Collapse id="main-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-            <Nav.Link as={Link} to="/products">Recorridos</Nav.Link>
-            <Nav.Link as={Link} to="/checkout">
-              Mis boletos{" "}
-              {count > 0 && <Badge bg="light" text="dark" pill>{count}</Badge>}
-            </Nav.Link>
-            <Nav.Link href="#registro">Registro</Nav.Link>
+            <Nav.Link as={Link} to="/#rutas">Recorridos</Nav.Link>
+            <Nav.Link as={Link} to="/checkout">Mis boletos</Nav.Link>
+            <Nav.Link as={Link} to="/registro">Registrar viajero</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
+
+
+
+
+
+

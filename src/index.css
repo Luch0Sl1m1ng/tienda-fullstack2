@@ -1,3 +1,4 @@
+/* === Reset general === */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,9 +14,9 @@ code {
 }
 
 /* === Colores de marca Trenes de Chile === */
-:root{
-  --brand-bg:#0B1E39;       /* azul oscuro corporativo */
-  --brand-accent:#FFD500;   /* amarillo EFE */
+:root {
+  --brand-bg: #0B1E39;       /* azul oscuro corporativo */
+  --brand-accent: #FFD500;   /* amarillo EFE */
 }
 
 /* === Botón primario con colores personalizados === */
@@ -35,4 +36,118 @@ code {
 @keyframes heroZoom {
   from { transform: scale(1.02); }
   to { transform: scale(1.07); }
+}
+
+/* --- HERO PORTADA, fijo y sin animación --- */
+.hero-banner {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 85vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  border-top: none;
+}
+
+/* overlay oscuro */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* texto del hero */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+/* === Navbar transparente (solo en Home) === */
+.navbar.navbar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent !important;
+  z-index: 10;
+}
+.navbar.navbar-overlay .navbar-brand,
+.navbar.navbar-overlay .nav-link {
+  color: #fff !important;
+}
+.navbar.navbar-overlay .nav-link:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* === Navbar sólida (para páginas internas) === */
+.navbar-solid {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--brand-bg) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.navbar-solid .navbar-brand,
+.navbar-solid .nav-link {
+  color: #fff !important;
+}
+.navbar-solid .nav-link:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* === Tarjetas de rutas === */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #000;
+}
+.card-text {
+  margin-bottom: 10px;
+}
+
+/* Imagen de la card: todas del mismo tamaño */
+.card img,
+.route-img {
+  width: 100%;
+  height: 320px; /* Ajusta si deseas 300-350 */
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Título de sección */
+h2, .section-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #0B1E39;
+}
+
+/* === Ajustes extra === */
+.container {
+  padding-bottom: 2rem;
 }

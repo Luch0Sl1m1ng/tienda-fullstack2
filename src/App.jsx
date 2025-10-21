@@ -1,22 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import ScrollToHash from "./components/ScrollToHash";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
-import NotFound from "./pages/NotFound";
+import Registro from "./pages/Registro";
+import { CartProvider } from "./context/CartContext";
 
-export default function App(){
+export default function App() {
   return (
-    <BrowserRouter>
-      <Header/>
+    <CartProvider>
+      <Header />
+      <ScrollToHash />
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/products" element={<Products/>}/>
-        <Route path="/checkout" element={<Checkout/>}/>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="*" element={<Home />} />
       </Routes>
-      <Footer/>
-    </BrowserRouter>
+    </CartProvider>
   );
 }
+
+
+
+

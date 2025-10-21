@@ -1,23 +1,23 @@
 [
   {
-    "id": 1,
-    "name": "Santiago • Chillán",
-    "desc": "Servicio TerraSur — Duración 5h 20min — 2 salidas diarias",
+    "id": "sc",
+    "title": "Santiago • Chillán",
+    "subtitle": "Servicio TerraSur — Duración 5h 20min — 2 salidas diarias",
     "price": 15990,
-    "image": "/images/imagen 1.jpg"
+    "img": "/images/santiago-chillan.png"
   },
   {
-    "id": 2,
-    "name": "Alameda • Rancagua",
-    "desc": "Rancagua Express — Duración 1h 10min — 5 salidas diarias",
+    "id": "sr",
+    "title": "Alameda • Rancagua",
+    "subtitle": "Rancagua Express — Duración 1h 10min — 5 salidas diarias",
     "price": 4990,
-    "image": "/images/imagen 2.jpg"
+    "img": "/images/santiago-rancagua.png"
   },
   {
-    "id": 3,
-    "name": "Concepción • Temuco",
-    "desc": "Servicio Nocturno — Duración 6h 15min — 1 salida diaria",
+    "id": "ct",
+    "title": "Concepción • Temuco",
+    "subtitle": "Servicio Nocturno — Duración 6h 15min — 1 salida diaria",
     "price": 19990,
-    "image": "/images/imagen 7.jpg"
+    "img": "/images/concepcion-temuco.png"
   }
 ]
